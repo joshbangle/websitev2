@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import SideNav from './components/SideNav/SideNav'
+import styled from 'styled-components'
+import { useSpring, animated } from 'react-spring'
 
 function App() {
+
+  const Vl = styled(animated.div)`
+    border-left: 2px solid black;
+    height: 70vh;
+    margin-right: 32px;
+  `
+  const spring = useSpring({
+    from: {
+      transform: 'scaleY(0)'
+    },
+    to: {
+      transform: 'scaleY(1)'
+    },
+    config: {
+      friction: 46
+    }
+  })
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <SideNav />
+      <Vl style={{...spring}}/>
+      <div>
+          Content Area
+      </div>
+         
     </div>
+
   );
 }
 
