@@ -4,7 +4,7 @@ import styles from './Projects.module.scss'
 export default function Projects() {
     return (
         <div className={styles.projectsContent}>
-            Test Area
+            <h1>Test Area</h1>
         </div>
     )
 }

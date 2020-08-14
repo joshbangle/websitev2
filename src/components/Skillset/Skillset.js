@@ -4,6 +4,8 @@ import HoverText from '../HoverText/HoverText'
 import styles from "./Skillset.module.scss"
 import styled from 'styled-components'
 import {useTrail, animated} from 'react-spring'
+import {useInView} from 'react-intersection-observer'
+
 
 
 const Card = styled(animated.div)`
@@ -23,31 +25,28 @@ const Card = styled(animated.div)`
     }
 `
 
-// const CardText = styled.h3`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-weight: 400;
-// `
-
 const Header = styled.h1`
     margin-bottom: 50px;
 `
 function Skillset() {
+    const [ref, inView, entry] = useInView({
+        threshold: 1
+    })
     const images = icons.images
     const trail = useTrail(images.length, {
         to: {
-            opacity: 1,
-            transform: `translateY(0px)`
+            opacity: inView ? 1 : 0,
+            transform: inView ? `translateY(0px)` : `translateY(150px)`
         },
         from: {
-            opacity: 0.1,
+            opacity: 0,
             transform: `translateY(150px)`
-        }
+        },
+        delay: 300
     })
     return (
         <div className={styles.skillsetContent}>
-            <Header>I am a Front End Developer who specializes in React.js. Some of my favorite technologies include:</Header>
+            <Header ref={ref}>I am a Front End Developer who specializes in React.js. Some of my favorite technologies include:</Header>
             <section className={styles.iconGrid}>
                 {trail.map((props, i) => (
                     <Card style={props}>
@@ -60,7 +59,7 @@ function Skillset() {
                         
                     </Card>
                 ))}
-            </section>
+            </section>       
         </div>
     );
 }

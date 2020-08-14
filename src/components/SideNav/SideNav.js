@@ -2,15 +2,19 @@ import React from 'react'
 import styles from './SideNav.module.scss'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 import {useTrail, animated} from 'react-spring'
+import {useInView} from 'react-intersection-observer'
 
 
 
 const SideNav = () => {
     const navItems = ['Skillset', 'Projects', 'Contact']
+    const [ref, inView, entry] = useInView({
+        threshold: 1
+    })
     const trail = useTrail(navItems.length, {
         to: {
-            opacity: 1,
-            transform: `translate(0px)`,
+            opacity: inView ? 1: 0,
+            transform: inView ? `translate(0px)` : `translate(-120px)`,
         },
         from: {
             opacity: 0,
@@ -23,7 +27,7 @@ const SideNav = () => {
                 <h1 className={styles.name}>Josh Bangle</h1>
                 <h3>Web Dev. Voice Actor. Dad. Nerd.</h3>              
             </section>
-            <ul className={styles.navList}>
+            <ul ref={ref} className={styles.navList}>
                 {trail.map((props, i) => (
                     <animated.li style={props} key={i}>
                         <a className={styles.sideLink} href='/#' >{navItems[i]}</a>
