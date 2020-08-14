@@ -16,7 +16,7 @@ function App() {
   `
   const spring = useSpring({
     from: {
-      transform: 'scaleY(0)'
+      transform: 'scaleY(0.2)'
     },
     to: {
       transform: 'scaleY(1)'
