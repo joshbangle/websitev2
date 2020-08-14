@@ -20,7 +20,8 @@ const SideNav = () => {
     return(
         <div className={styles.sideNav}>
             <section className={styles.brand}>
-                <img src='/img/Frame 12.png' alt='logo home'/>                
+                <h1 className={styles.name}>Josh Bangle</h1>
+                <h3>Web Dev. Voice Actor. Dad. Nerd.</h3>              
             </section>
             <ul className={styles.navList}>
                 {trail.map((props, i) => (
