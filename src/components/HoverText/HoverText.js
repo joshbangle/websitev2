@@ -7,6 +7,7 @@ import styled, {keyframes} from 'styled-components'
 const Container = styled.div`
   position: relative;
   display: flex;
+  z-index: 20;
 `
 const fade = keyframes`
   from {
@@ -32,7 +33,7 @@ const Info = styled.div`
   margin-bottom: 5px;
   color: #fff;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
 `
 
 export default function Tooltip ({ text, children}) {

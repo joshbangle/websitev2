@@ -1,9 +1,9 @@
 .sideNav {
     float: left;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-right: 16px;
     text-align: right;
 }
@@ -16,7 +16,7 @@
 .brand{
     display: flex;
     flex-direction: column;
-    flex: 1;
+
     align-items: flex-end;
     justify-content: flex-start;
     width: 300px;
@@ -27,13 +27,13 @@
 .socials {
     display: flex;
     margin-bottom: 20px;
-    flex: 1;
     align-items: flex-end;
     justify-content: flex-end;
 }
 
 .linkedin {
     padding: 0 10px;
+    text-decoration: none;
     color: #0072b1;
     transition: all .2s ease-in-out;
 }
@@ -41,13 +41,16 @@
     transform: scale(1.1);
 }
 .github {
+    text-decoration: none;
     transition: all .2s ease-in-out;
     padding: 0 10px;
+    color: black;
 }
 .github:hover{
     transform: scale(1.1);
     color: #595959
 }
+
 .topInfo h3 {
     margin: 0;
 }

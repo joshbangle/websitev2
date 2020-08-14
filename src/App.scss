@@ -1,6 +1,12 @@
-.App {
-  display: block;
-}
+// .App {
+//   text-align: center;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 0 5%;
+//   height: 100vh;
+//   background-color: #eee;
+// }
 
 
 // .content{
@@ -10,10 +16,9 @@
 //   height: 100vh;
 //   width: 100%;
 // }
-
-.content{
-  display: block;
-  height: 70vh;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 .App-logo {

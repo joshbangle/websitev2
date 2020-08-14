@@ -3,6 +3,7 @@ import styles from './SideNav.module.scss'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 import {useTrail, animated} from 'react-spring'
 import {useInView} from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 
 
 
@@ -30,13 +31,14 @@ const SideNav = () => {
             <ul ref={ref} className={styles.navList}>
                 {trail.map((props, i) => (
                     <animated.li style={props} key={i}>
-                        <a className={styles.sideLink} href='/#' >{navItems[i]}</a>
+                        <Link to={`/${navItems[i]}`} className={styles.sideLink} >{navItems[i]}</Link>
                     </animated.li>
                 ))}
             </ul>
             <div className={styles.socials}>
-                <FaGithubSquare size={50} className={styles.github}/>
-                <FaLinkedin size={50} className={styles.linkedin}/>
+                <a href='https://www.github.com/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.github}><FaGithubSquare size={50} /></a>
+                
+                <a href='https://www.linkedin.com/in/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.linkedin}><FaLinkedin size={50} /></a>
             </div>
         </div>
     )
