@@ -41,7 +41,7 @@ function Skillset() {
             transform: `translateY(0px)`
         },
         from: {
-            opacity: 0,
+            opacity: 0.1,
             transform: `translateY(150px)`
         }
     })
