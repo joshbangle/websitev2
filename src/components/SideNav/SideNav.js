@@ -8,7 +8,7 @@ import {useInView} from 'react-intersection-observer'
 
 const SideNav = () => {
     const navItems = ['Skillset', 'Projects', 'Contact']
-    const [ref, inView, entry] = useInView({
+    const [ref, inView] = useInView({
         threshold: 1
     })
     const trail = useTrail(navItems.length, {

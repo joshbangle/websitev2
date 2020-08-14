@@ -3,7 +3,6 @@ import './App.scss';
 import SideNav from './components/SideNav/SideNav'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
-import Projects from './components/Projects/Projects'
 import Hero from './components/Hero/Hero'
 
 

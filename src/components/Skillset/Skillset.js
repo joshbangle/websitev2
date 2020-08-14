@@ -29,7 +29,7 @@ const Header = styled.h1`
     margin-bottom: 50px;
 `
 function Skillset() {
-    const [ref, inView, entry] = useInView({
+    const [ref, inView] = useInView({
         threshold: 1
     })
     const images = icons.images
