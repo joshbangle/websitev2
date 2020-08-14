@@ -2,7 +2,7 @@ import React from 'react';
 import {icons} from '../../json/icons.js'
 import HoverText from '../HoverText/HoverText'
 import styles from "./Skillset.module.scss"
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 import {useTrail, animated} from 'react-spring'
 
 
@@ -23,12 +23,12 @@ const Card = styled(animated.div)`
     }
 `
 
-const CardText = styled.h3`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
-`
+// const CardText = styled.h3`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-weight: 400;
+// `
 
 const Header = styled.h1`
     margin-bottom: 50px;

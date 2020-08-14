@@ -25,7 +25,7 @@ const SideNav = () => {
             <ul className={styles.navList}>
                 {trail.map((props, i) => (
                     <animated.li style={props} key={i}>
-                        {navItems[i]}
+                        <a className={styles.sideLink} href='/#' >{navItems[i]}</a>
                     </animated.li>
                 ))}
             </ul>
