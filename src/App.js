@@ -3,6 +3,9 @@ import './App.scss';
 import SideNav from './components/SideNav/SideNav'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
+import Projects from './components/Projects/Projects'
+
+import Skillset from './components/Skillset/Skillset'
 
 function App() {
 
@@ -25,13 +28,12 @@ function App() {
   
   return (
     <div className="App">
+        <SideNav />
+        <Vl style={{...spring}}/>
+      <div className="content">
+        <Skillset />
 
-      <SideNav />
-      <Vl style={{...spring}}/>
-      <div>
-          Content Area
       </div>
-         
     </div>
 
   );

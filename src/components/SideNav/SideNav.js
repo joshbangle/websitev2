@@ -20,19 +20,18 @@ const SideNav = () => {
     return(
         <div className={styles.sideNav}>
             <section className={styles.brand}>
-                <h1 className={styles.name}>Josh Bangle</h1>
-                <h3>Web Dev · Voice Actor · Dad · Nerd</h3> 
+                <img src='/img/Frame 12.png' alt='logo home'/>                
             </section>
             <ul className={styles.navList}>
                 {trail.map((props, i) => (
-                    <animated.li style={props}>
+                    <animated.li style={props} key={i}>
                         {navItems[i]}
                     </animated.li>
                 ))}
             </ul>
             <div className={styles.socials}>
-                <FaGithubSquare size={50} className={styles.icon}/>
-                <FaLinkedin size={50} className={styles.icon}/>
+                <FaGithubSquare size={50} className={styles.github}/>
+                <FaLinkedin size={50} className={styles.linkedin}/>
             </div>
         </div>
     )
