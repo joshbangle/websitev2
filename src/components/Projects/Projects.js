@@ -14,10 +14,6 @@ const ProjectContainer = styled.div`
     padding-top: 30px;
 `
 
-const Headline = styled.h1`
-    color: #eee
-    font-size: 4em;
-`
 
 export default function Projects() {
 

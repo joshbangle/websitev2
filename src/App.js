@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Route } from 'react-router-dom'
 import styled from 'styled-components'
-import Skillset from './components/Skillset/Skillset'
-import Projects from './components/Projects/Projects'
 import Layout from './components/Layout/Layout'
 
 const ContentArea = styled.div`
