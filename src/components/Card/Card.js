@@ -7,8 +7,8 @@ import HoverText from '../HoverText/HoverText'
 const CardContainer = styled(animated.div)`
     border: none;
     height: ${props => props.text ? '400px' : 'auto'};
-    max-width: 400px;
-    background-color: #fff;
+    max-width: 300px;
+    background-color: #ddd;
     box-shadow: 6px 10px 10px -9px rgba(0,0,0,0.75);
     padding: 22px 8px;
     border-radius: 8px;
@@ -25,7 +25,7 @@ const CardGrid = styled.div`
     max-width: 100%;
     justify-content: center;
     align-items: center;
-    overflow: auto;
+
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding-top: 56px;
@@ -60,7 +60,8 @@ const DemoLink = styled.a`
 
 export default function AnimatedCards({ hoverText = false, number = 1, text, data}) {
     const [ref, inView] = useInView({
-        threshold: 0
+        threshold: 0,
+        triggerOnce: true,
     })
     const trail = useTrail(number, {
         to: {

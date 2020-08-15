@@ -2,6 +2,8 @@ import React from 'react';
 import SideNav from '../SideNav/SideNav'
 import styled from 'styled-components'
 import {useSpring, animated} from 'react-spring'
+import Skillset from '../Skillset/Skillset'
+import Projects from '../Projects/Projects'
 
 
 const LayoutWrapper = styled.div`
@@ -9,7 +11,6 @@ const LayoutWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 2%;
     height: 100vh;
     background-color: #eee;
 `
@@ -24,6 +25,7 @@ const ContentWrapper = styled.div`
     display: block;
     height: 100vh;
     width: 100%;
+    overflow: auto;
 `
 
 const Layout = (props) => {
@@ -44,9 +46,9 @@ const Layout = (props) => {
     return (
         <LayoutWrapper>
             <SideNav />
-            <Vl style={spring}/>
             <ContentWrapper>
-                {props.children}
+                <Skillset />
+                <Projects />
             </ContentWrapper>
             
         </LayoutWrapper>

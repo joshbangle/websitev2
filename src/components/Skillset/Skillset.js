@@ -7,7 +7,8 @@ import AnimatedCards from '../Card/Card'
 
 const Header = styled.h1`
     margin-bottom: 50px;
-    background-color: transparent;
+    color: #eee;
+    font-size: 3em;
 `
 function Skillset() {
     const icons = images.icons

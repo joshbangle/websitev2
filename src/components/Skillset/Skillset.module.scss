@@ -6,9 +6,11 @@
     flex-wrap: wrap;
 }
 .skillsetContent {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #4F6367;
+    padding: 0 140px;
 }
 

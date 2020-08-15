@@ -5,16 +5,18 @@ import {images} from '../../json/images'
 
 const ProjectContainer = styled.div`
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
+    background-color: #F28F3B;
+    padding-top: 30px;
 `
 
 const Headline = styled.h1`
-    margin-top: 32px;
+    color: #eee
+    font-size: 4em;
 `
 
 export default function Projects() {
@@ -23,10 +25,9 @@ export default function Projects() {
 
     return (
         <ProjectContainer>
-            <Headline>Projects</Headline>
-            <AnimatedCards text={true} number={projectImages.length} data={projectImages}>
-                <h1>test content</h1>
-            </AnimatedCards>
+            <h1 style={{'font-size': '3em'}}>Projects</h1>
+            <AnimatedCards text={true} number={projectImages.length} data={projectImages} />
+
         </ProjectContainer>
     )
 }
