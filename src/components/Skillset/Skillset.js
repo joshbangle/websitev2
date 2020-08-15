@@ -14,7 +14,7 @@ function Skillset() {
     const icons = images.icons
 
     return (
-        <div className={styles.skillsetContent}>
+        <div id='skillset' className={styles.skillsetContent}>
             <Header>I am a Front End Developer who specializes in React.js. Some of my favorite technologies include:</Header>
             <AnimatedCards number={icons.length} text={false} data={icons} hoverText={true} />
         </div>

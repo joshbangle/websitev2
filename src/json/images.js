@@ -14,7 +14,8 @@ export const images = {
             'Github Battle',
             `Application using the Github API to show the top repositories and compare users via 
                 a "Battle" feature. Built with React.js, utilizing Hooks.`, 
-            'https://goofy-noether-d96237.netlify.app/'
+            'https://goofy-noether-d96237.netlify.app/',
+            'https://github.com/joshbangle/github-battle'
         ],
 
         [
@@ -23,7 +24,8 @@ export const images = {
             'Spaz', 
             `Video hosting mockup using AWS for cloud video storage,
                 Rails Devise, and Stripe API. Bootstrap used for design and grid layouts.`,
-            'https://spaz-josh-bangle.herokuapp.com/'
+            'https://spaz-josh-bangle.herokuapp.com/',
+            'https://github.com/joshbangle/spaz'
         ],
 
         [
@@ -32,7 +34,8 @@ export const images = {
             'Grammable', 
             `Instagram clone entirely dedicated to learning and practicing Test Driven Development
                 using Rails rspec.`,
-            `https://grammable-josh-bangle.herokuapp.com/`
+            `https://grammable-josh-bangle.herokuapp.com/`,
+            'https://github.com/joshbangle/grammable'
         ],
 
         [
@@ -41,7 +44,8 @@ export const images = {
             'Welp',
             `Yelp clone to practice AWS image hosting, Google Maps API for automatic
                 mapping of stored addresses, and Devise for user authentication.`, 
-            'https://welp-joshua-bangle.herokuapp.com/'
+            'https://welp-joshua-bangle.herokuapp.com/',
+            'https://github.com/joshbangle/welp'
         ],
     ]
 }

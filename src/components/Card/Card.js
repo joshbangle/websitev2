@@ -94,7 +94,10 @@ export default function AnimatedCards({ hoverText = false, number = 1, text, dat
                     <TextContent id='text'>
                         <h1 style={{margin: ' 8px 0 0 0'}}>{data[i][2]}</h1>
                         <h4>{data[i][3]}</h4>
-                        <DemoLink rel="noopener noreferrer" href={data[i][4]} target='_blank'>Click here for live demo</DemoLink>
+                        <div>
+                            <DemoLink rel="noopener noreferrer" href={data[i][4]} target='_blank'>Click here for live demo</DemoLink>
+                            <DemoLink rel="noopener noreferrer" href={data[i][5]} target='_blank'>View Github Repo</DemoLink>
+                        </div>
                     </TextContent>
                     }
                 </CardContainer>

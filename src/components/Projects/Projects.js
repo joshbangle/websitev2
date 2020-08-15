@@ -10,7 +10,7 @@ const ProjectContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #F28F3B;
+    background-color: #BE6E46;
     padding-top: 30px;
 `
 
@@ -20,8 +20,8 @@ export default function Projects() {
     const projectImages = images.projects
 
     return (
-        <ProjectContainer>
-            <h1 style={{'font-size': '3em'}}>Projects</h1>
+        <ProjectContainer id='projects'>
+            <h1 style={{'font-size': '3em', color: '#fff'}}>Projects</h1>
             <AnimatedCards text={true} number={projectImages.length} data={projectImages} />
 
         </ProjectContainer>

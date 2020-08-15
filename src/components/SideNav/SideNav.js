@@ -4,7 +4,7 @@ import styles from './SideNav.module.scss'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 import {useTrail, animated} from 'react-spring'
 import {useInView} from 'react-intersection-observer'
-import { Link } from 'react-router-dom'
+import {HashLink as Link} from 'react-router-hash-link'
 
 const Vl = styled(animated.div)`
     position: abolute;
@@ -15,10 +15,12 @@ const Vl = styled(animated.div)`
     `
 
 const SideNav = () => {
+
     const navItems = ['Skillset', 'Projects', 'Contact']
     const [ref, inView] = useInView({
         threshold: 1
     })
+
     const trail = useTrail(navItems.length, {
         to: {
             opacity: inView ? 1: 0,
@@ -40,7 +42,7 @@ const SideNav = () => {
                 <ul ref={ref} className={styles.navList}>
                     {trail.map((props, i) => (
                         <animated.li style={props} key={i}>
-                            <Link to={`/${navItems[i]}`} className={styles.sideLink} >{navItems[i]}</Link>
+                            <Link smooth to={`pathLink#${navItems[i].toLowerCase()}`} className={styles.sideLink}>{navItems[i]}</Link>                   
                         </animated.li>
                     ))}
                 </ul>

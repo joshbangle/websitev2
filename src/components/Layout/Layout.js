@@ -1,8 +1,11 @@
 import React from 'react';
+
 import SideNav from '../SideNav/SideNav'
 import styled from 'styled-components'
 import Skillset from '../Skillset/Skillset'
 import Projects from '../Projects/Projects'
+import Contact from '../Contact/Contact'
+
 
 
 const LayoutWrapper = styled.div`
@@ -24,14 +27,13 @@ const ContentWrapper = styled.div`
 const Layout = (props) => {
 
 
-
-    
     return (
         <LayoutWrapper>
-            <SideNav />
+            <SideNav  />
             <ContentWrapper>
-                <Skillset />
-                <Projects />
+                <Skillset/>
+                <Projects/>
+                <Contact/>
             </ContentWrapper>
             
         </LayoutWrapper>
