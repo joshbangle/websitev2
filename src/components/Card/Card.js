@@ -6,7 +6,7 @@ import HoverText from '../HoverText/HoverText'
 
 const CardContainer = styled(animated.div)`
     border: none;
-    height: ${props => props.text ? '400px' : 'auto'};
+    height: ${props => props.text ? '380px' : 'auto'};
     max-width: 300px;
     background-color: #ddd;
     box-shadow: 6px 10px 10px -9px rgba(0,0,0,0.75);
@@ -44,7 +44,7 @@ const TextContent = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 50%;
-    border-top: 1px solid black;
+    margin-top: 0;
 `
 const Image = styled.img`
     object-fit: cover;
@@ -78,7 +78,7 @@ export default function AnimatedCards({ hoverText = false, number = 1, text, dat
     return (
         <CardGrid id='grid' ref={ref}>
             {trail.map((attr, i) => (
-                <CardContainer text={text} id='card' style={attr}>
+                <CardContainer key={i} text={text} id='card' style={attr}>
                     {hoverText ? 
                     <HoverText text={data[i][2]}> 
                         <ImageContainer id='imgcontainer' style={{height: text ? `50%` : `100%`, width: text ? '400px' : '100px'}}>

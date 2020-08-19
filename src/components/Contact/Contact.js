@@ -8,6 +8,7 @@ const ContactContent = styled.div`
     align-items: center;
     justify-content: center;
     background-color: #7286A0;
+    color: #fff;
 `
 const Headline = styled.div`
     font-size: 3em;

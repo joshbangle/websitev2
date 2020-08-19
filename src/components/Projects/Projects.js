@@ -5,13 +5,12 @@ import {images} from '../../json/images'
 
 const ProjectContainer = styled.div`
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: #BE6E46;
-    padding-top: 30px;
 `
 
 
@@ -21,9 +20,8 @@ export default function Projects() {
 
     return (
         <ProjectContainer id='projects'>
-            <h1 style={{'font-size': '3em', color: '#fff'}}>Projects</h1>
+            <h1 style={{'fontSize': '3em', color: '#fff'}}>Projects</h1>
             <AnimatedCards text={true} number={projectImages.length} data={projectImages} />
-
         </ProjectContainer>
     )
 }

@@ -14,14 +14,15 @@ const LayoutWrapper = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #eee;
 `
 
 const ContentWrapper = styled.div`
     display: block;
     height: 100vh;
     width: 100%;
-    overflow: auto;
+    margin-left: 334px;
+    font-family: 'Roboto';
+    font-weight: 400;
 `
 
 const Layout = (props) => {
