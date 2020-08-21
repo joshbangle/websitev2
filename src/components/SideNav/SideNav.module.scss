@@ -1,12 +1,12 @@
 .sideNav {
-    display: block;
     position: fixed;
+    display: flex;
     width: 300px;
     height: 100vh;
-    margin-left: 16px;
-    z-index: 1;
+    z-index: 12;
     top: 0;
     left: 0;
+    padding: 0 16px 0 16px;
 }
 .navElements{
     height: 100vh;
@@ -24,10 +24,9 @@
 .brand{
     display: flex;
     flex-direction: column;
-
     align-items: flex-end;
     justify-content: flex-start;
-    width: 300px;
+    width: 100%;
 }
 .brand img {
     width: 100%;
@@ -88,27 +87,12 @@
     font-style: none;
 }
 
-.navLink {
-    text-decoration: underline solid transparent;
-    color: black;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-}
-
-.navLink:hover{
-    text-decoration: underline solid black;
-}
-
-.activeLink {
-    text-decoration: underline solid black;
-    font-weight: bold;
-}
 
 .projectsLink {
     text-decoration: underline solid transparent;
     color: black;
     cursor: pointer;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .projectsLink:hover {
@@ -126,7 +110,7 @@
     text-decoration: underline solid transparent;
     color: black;
     cursor: pointer;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .skillsetLink:hover {
@@ -144,16 +128,16 @@
     text-decoration: underline solid transparent;
     color: black;
     cursor: pointer;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .contactLink:hover {
-    text-decoration: underline solid #7286A0;
-    color: #7286A0;
+    text-decoration: underline solid #DEB841;
+    color: #DEB841;
 }
 
 .activeContact {
-    text-decoration: underline solid #7286A0;
-    color: #7286A0;
+    text-decoration: underline solid #DEB841;
+    color: #DEB841;
     font-weight: bold;
 }

@@ -11,18 +11,15 @@ import Contact from '../Contact/Contact'
 const LayoutWrapper = styled.div`
     text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
 `
 
-const ContentWrapper = styled.div`
-    display: block;
+const Content = styled.div`
+    margin-left: 332px;
     height: 100vh;
-    width: 100%;
-    margin-left: 334px;
+    float: right;
     font-family: 'Roboto';
     font-weight: 400;
+    width: 100%;
 `
 
 const Layout = (props) => {
@@ -31,11 +28,11 @@ const Layout = (props) => {
     return (
         <LayoutWrapper>
             <SideNav  />
-            <ContentWrapper>
+            <Content id='content'>
                 <Skillset/>
                 <Projects/>
                 <Contact/>
-            </ContentWrapper>
+            </Content>
             
         </LayoutWrapper>
     );

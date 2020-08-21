@@ -18,7 +18,10 @@ function Skillset() {
         
         <div id='skillset' className={styles.skillsetContent}>
             <Header>I am a Front End Developer who specializes in React.js. Some of my favorite technologies include:</Header>
-            <AnimatedCards number={icons.length} data={icons} hoverText={true} />
+            <div className={styles.iconGrid}>
+                <AnimatedCards number={icons.length} data={icons} hoverText={true} />
+            </div>
+            
         </div>
     );
 }

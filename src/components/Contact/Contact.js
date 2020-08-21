@@ -7,8 +7,7 @@ const ContactContent = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #7286A0;
-    color: #fff;
+    background-color: #DEB841;
 `
 const Headline = styled.div`
     font-size: 3em;

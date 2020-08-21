@@ -17,6 +17,9 @@ const CardContainer = styled(animated.div)`
     justify-content: space-between;
     align-items: center;
     margin: 18px;
+    :&hover {
+        color: red;
+    }
 `
 
 const CardGrid = styled.div`
@@ -25,7 +28,6 @@ const CardGrid = styled.div`
     max-width: 100%;
     justify-content: center;
     align-items: center;
-
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding-top: 56px;
@@ -33,7 +35,7 @@ const CardGrid = styled.div`
 
 const ImageContainer = styled.div`
     display: flex;
-    height: 50%;
+    height: 45%;
     width: 100%;
     overflow: hidden;
 `
@@ -43,7 +45,7 @@ const TextContent = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 50%;
+    height: 55%;
     margin-top: 0;
 `
 const Image = styled.img`
@@ -63,17 +65,24 @@ export default function AnimatedCards({ hoverText = false, number = 1, text, dat
         threshold: 0,
         triggerOnce: true,
     })
-    const trail = useTrail(number, {
-        to: {
-            opacity: inView ? 1 : 0,
-            transform: inView ? `translateY(0px)` : `translateY(150px)`
-        },
-        from: {
-            opacity: 0,
-            transform: `translateY(150px)`
-        },
-        delay: 300
-    })
+
+    const [trail, set, stop] = useTrail(number, () => (
+        {
+        opacity: 0,
+        transform: `translateY(150px)`
+        }
+    ))
+    React.useEffect(() => {
+        if(inView) {
+            set({
+                opacity: 1,
+                transform: `translateY(0)`,
+                delay: 300
+            })
+        }
+        stop()
+        // eslint-disable-next-line
+    }, [inView])
 
     return (
         <CardGrid id='grid' ref={ref}>
@@ -96,6 +105,7 @@ export default function AnimatedCards({ hoverText = false, number = 1, text, dat
                         <h4>{data[i][3]}</h4>
                         <div>
                             <DemoLink rel="noopener noreferrer" href={data[i][4]} target='_blank'>Click here for live demo</DemoLink>
+                            <br />
                             <DemoLink rel="noopener noreferrer" href={data[i][5]} target='_blank'>View Github Repo</DemoLink>
                         </div>
                     </TextContent>
