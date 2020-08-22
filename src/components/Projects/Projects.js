@@ -27,6 +27,8 @@ const Grid = styled.div`
 `
 
 const IconContainer = styled.div`
+    display: flex;
+    justify-content: center;
     width: 48%;
     height: 200px;
 `
@@ -41,8 +43,8 @@ const Project = styled(animated.div)`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 10%;
     margin-top: 16px;
+    padding: 0 10%;
 `
 const Name = styled.h1`
     letter-spacing: 1px;
