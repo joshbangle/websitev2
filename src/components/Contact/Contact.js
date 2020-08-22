@@ -7,10 +7,12 @@ const ContactContent = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #DEB841;
+    background-color: #38586D;
+    color: #FFF;
 `
 const Headline = styled.div`
     font-size: 3em;
+    letter-spacing: 2px;
     font-weight: bold;
 `
 
@@ -24,7 +26,7 @@ const Contact = () => {
         <section id='contact'>
             <ContactContent>
                 <Headline>Contact me</Headline>
-                <h1>Feel free to reach out to me through LinkedIn, or email me directly at:</h1>
+                <h1 style={{fontFamily: 'Lora'}}>Feel free to reach out to me through LinkedIn, or email me directly at:</h1>
                 <Email>joshua.bangle@gmail.com</Email>
             </ContactContent>
         </section>

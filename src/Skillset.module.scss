@@ -1,0 +1,18 @@
+@import 'src/colors';
+
+.iconGrid {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skillsetContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #3B3B4F;
+    padding: 0 140px;
+    z-index: 3;
+}

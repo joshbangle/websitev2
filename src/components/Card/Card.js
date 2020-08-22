@@ -10,8 +10,8 @@ const CardContainer = styled(animated.div)`
     max-width: 300px;
     background-color: #ddd;
     box-shadow: 6px 10px 10px -9px rgba(0,0,0,0.75);
-    padding: 22px 8px;
-    border-radius: 8px;
+    padding: 16px 16px;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,8 +79,9 @@ export default function AnimatedCards({ hoverText = false, number = 1, text, dat
                 transform: `translateY(0)`,
                 delay: 300
             })
+            stop()
         }
-        stop()
+        
         // eslint-disable-next-line
     }, [inView])
 

@@ -47,17 +47,19 @@ const SideNav = () => {
                     <h1 className={styles.name}>Josh Bangle</h1>
                     <h3>Web Dev. Voice Actor. Dad. Nerd.</h3>              
                 </section>
-                <ul className={styles.navList}>
-                    <animated.li style={spring1}> 
-                        <Link className={styles.skillsetLink} activeClass={styles.activeSkillset} to={`${navItems[0].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[0]}</Link>
-                    </animated.li>
-                    <animated.li style={spring2}> 
-                        <Link className={styles.projectsLink} activeClass={styles.activeProjects} to={`${navItems[1].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[1]}</Link>
-                    </animated.li>
-                    <animated.li style={spring3}> 
-                        <Link className={styles.contactLink} activeClass={styles.activeContact} to={`${navItems[2].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[2]}</Link>
-                    </animated.li>
-                </ul>
+                <nav>
+                    <ul className={styles.navList}>
+                        <animated.li style={spring1}> 
+                            <Link className={styles.skillsetLink} activeClass={styles.activeLink} to={`${navItems[0].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[0]}</Link>
+                        </animated.li>
+                        <animated.li style={spring2}> 
+                            <Link className={styles.projectsLink} activeClass={styles.activeLink} to={`${navItems[1].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[1]}</Link>
+                        </animated.li>
+                        <animated.li style={spring3}> 
+                            <Link className={styles.contactLink} activeClass={styles.activeLink} to={`${navItems[2].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[2]}</Link>
+                        </animated.li>
+                    </ul>                    
+                </nav>
                 <div className={styles.socials}>
                     <a href='https://www.github.com/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.github}><FaGithubSquare size={50} /></a>
                     

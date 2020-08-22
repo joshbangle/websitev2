@@ -10,7 +10,7 @@ export const images = {
     'projects': [
         [
             1, 
-            '/img/projects/github-battle.png',
+            '/img/icons/battle.png',
             'Github Battle',
             `Application using the Github API to show the top repositories and compare users via 
                 a "Battle" feature. Built with React.js, utilizing Hooks.`, 
@@ -20,9 +20,9 @@ export const images = {
 
         [
             2,
-            '/img/projects/spaz.png',
+            '/img/icons/campfire.png',
             'Spaz', 
-            `Video hosting mockup using AWS for cloud video storage,
+            `Video hosting Camping Advice mockup using AWS for cloud video storage,
                 Rails Devise, and Stripe API. Bootstrap used for design and grid layouts.`,
             'https://spaz-josh-bangle.herokuapp.com/',
             'https://github.com/joshbangle/spaz'
@@ -30,7 +30,7 @@ export const images = {
 
         [
             3,
-            '/img/projects/grammable.png',
+            '/img/icons/camera.png',
             'Grammable', 
             `Instagram clone entirely dedicated to learning and practicing Test Driven Development
                 using Rails rspec.`,
@@ -40,7 +40,7 @@ export const images = {
 
         [
             4,
-            '/img/projects/welp.png',
+            '/img/icons/plate.png',
             'Welp',
             `Yelp clone to practice AWS image hosting, Google Maps API for automatic
                 mapping of stored addresses, and Devise for user authentication.`, 
