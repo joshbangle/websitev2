@@ -12,7 +12,7 @@ const ProjectContainer = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: #FFF;
-    padding-top: 120px;
+    padding-top: 80px;
 `
 
 const Grid = styled.div`
@@ -44,6 +44,11 @@ const Project = styled(animated.div)`
     padding: 0 10%;
     margin-top: 16px;
 `
+const Name = styled.h1`
+    letter-spacing: 1px;
+    color: #333;
+`
+
 const Desc = styled.p`
     font-size: 1.3em;
     font-family: Lora;
@@ -84,11 +89,11 @@ export default function Projects() {
 
     return (
         <ProjectContainer id='projects'>
-            <h1 style={{'fontSize': '3em', color: '#333'}}>Projects</h1>
+            <h1 style={{'fontSize': '4em', color: '#333'}}>Projects</h1>
             <Grid ref={ref}>
                 {trail.map((attr, i) => (
                     <Project style={attr} key={projectImages[i][0]}>
-                        <h1>{projectImages[i][2]}</h1>
+                        <Name>{projectImages[i][2]}</Name>
                         <IconContainer>
                             <a href={projectImages[i][4]} target="_blank" rel="noopener noreferrer"><Icon src={projectImages[i][1]} /></a>
                         </IconContainer>

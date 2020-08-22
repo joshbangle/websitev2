@@ -76,24 +76,15 @@ $breakpoints: (
     justify-content: flex-end;
 }
 
-.linkedin {
+.social {
     padding: 0 10px;
     text-decoration: none;
     color: #0072b1;
     transition: all .2s ease-in-out;
-}
-.linkedin:hover{
-    transform: scale(1.1);
-}
-.github {
-    text-decoration: none;
-    transition: all .2s ease-in-out;
-    padding: 0 10px;
-    color: black;
-}
-.github:hover{
-    transform: scale(1.1);
-    color: #595959
+    &:hover {
+        transform: scale(1.1);
+        color: #595959;
+    }
 }
 
 .topInfo h3 {

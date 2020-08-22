@@ -28,12 +28,14 @@ const Info = styled.div`
   left: 50%;
   margin-left: -80px;
   border-radius: 3px;
-  background-color: hsla(0, 0%, 20%, 0.9);
+  background-color: hsla(80, 0%, 40%, 0.9);
+  letter-spacing: 1px;
   padding: 7px;
   margin-bottom: 5px;
   color: #fff;
   text-align: center;
   font-size: 18px;
+  font-family: Lora;
 `
 
 export default function Tooltip ({ text, children}) {

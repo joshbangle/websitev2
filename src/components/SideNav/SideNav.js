@@ -61,9 +61,9 @@ const SideNav = () => {
                     </ul>                    
                 </nav>
                 <div className={styles.socials}>
-                    <a href='https://www.github.com/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.github}><FaGithubSquare size={50} /></a>
+                    <a href='https://www.github.com/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.social}><FaGithubSquare size={50} /></a>
                     
-                    <a href='https://www.linkedin.com/in/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.linkedin}><FaLinkedin size={50} /></a>
+                    <a href='https://www.linkedin.com/in/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.social}><FaLinkedin size={50} /></a>
                 </div>
             </div>
         </div>
