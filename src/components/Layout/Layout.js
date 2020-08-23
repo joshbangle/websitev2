@@ -18,7 +18,6 @@ const Content = styled.div`
         margin: 0px;
         width: 100vw;
         padding: 0;
-        overflow: hidden;
     }
     @media(min-width: 1024px){
         margin-left: 332px;

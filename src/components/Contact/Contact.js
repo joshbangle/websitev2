@@ -24,6 +24,7 @@ const Email = styled.div`
 `
 const TextContent = styled.div`
     @media(max-width: 600px) {
+        box-sizing: border-box;
         width: 100%;
         padding: 20px;
         text-align: center;
