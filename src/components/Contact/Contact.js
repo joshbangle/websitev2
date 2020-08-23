@@ -72,7 +72,7 @@ const Contact = () => {
                 
                 <Everything>
                     <PadContainer>
-                        <Pad src='/img/icons/pad.png' />
+                        <Pad src='/img/icons/pad2.svg' />
                     </PadContainer>
                 </Everything>
             </ContactContent>

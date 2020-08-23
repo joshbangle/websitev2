@@ -91,10 +91,10 @@ export default function Projects() {
     const [spring, setSpring, stopSpring] = useSpring(() => (
         {
         config: {
-            duration: 3000,
             tension: 50,
-            friction: 800,
-            mass: 800
+            friction: 130,
+            mass: 10,
+            precision: 0.1
         },
         transform: 'translateY(0px)',
         opacity: 1
@@ -110,11 +110,11 @@ export default function Projects() {
             })
             stopTrail()
             setSpring({
-                transform: 'translateY(-2200px)',
+                transform: 'translateY(-2800px)',
                 opacity: 0,
                 delay: 1700
             })
-            stopSpring()
+
         }
         // eslint-disable-next-line
     }, [inView])
