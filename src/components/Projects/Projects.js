@@ -135,7 +135,7 @@ export default function Projects() {
                     <Project style={attr} key={projectImages[i][0]}>
                         <Name>{projectImages[i][2]}</Name>
                         <IconContainer>
-                            <a style={{width: '100%'}} href={projectImages[i][4]} target="_blank" rel="noopener noreferrer"><Icon src={projectImages[i][1]} /></a>
+                            <a style={{display: 'flex', justifyContent: 'center', width: '100%'}} href={projectImages[i][4]} target="_blank" rel="noopener noreferrer"><Icon src={projectImages[i][1]} /></a>
                         </IconContainer>
                         <Desc>{projectImages[i][3]}</Desc>
                         <div>
