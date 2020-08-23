@@ -49,9 +49,11 @@ const TrueContent = styled.div`
 `
 const PadContainer = styled.div`
     position: absolute;
-    left: 6px;
+    display: flex;
+    align-items: flex-end;
+    left: 24px;
     bottom: 8px;
-    height: 80px;
+    height: 50px;
 `
 const Pad = styled.img`
     height: 100%;
@@ -73,6 +75,7 @@ const Contact = () => {
                 <Everything>
                     <PadContainer>
                         <Pad src='/img/icons/pad2.svg' />
+                        <p style={{margin: `0px 4px`}}>We Have Liftoff</p>
                     </PadContainer>
                 </Everything>
             </ContactContent>

@@ -110,7 +110,7 @@ export default function Projects() {
             })
             stopTrail()
             setSpring({
-                transform: 'translateY(-2800px)',
+                transform: 'translateY(-2600px)',
                 opacity: 0,
                 delay: 1700
             })
