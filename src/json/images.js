@@ -10,7 +10,7 @@ export const images = {
     'projects': [
         [
             1, 
-            '/img/icons/battle.png',
+            '/img/icons/lightsabers3.png',
             'Github Battle',
             `Application using the Github API to show the top repositories and compare users via 
                 a "Battle" feature. Built with React.js, utilizing Hooks.`, 

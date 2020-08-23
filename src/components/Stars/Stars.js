@@ -13,7 +13,7 @@ const flicker = keyframes`
 
 const Star = styled.div`
     animation: ${flicker} infinite;
-    animation-duration: ${props => props.animationDuration}s;
+    animation-duration: ${props => props.animationDuration + 1}s;
     animation-delay: ${props => props.animationDelay}s;
     width: ${props => props.size}px;
     height: ${props => props.size}px;
@@ -47,7 +47,7 @@ const Stars = () => {
         <StarContainer id='star-container'>
             {starCount().map((star, i) => (
                 <Star 
-                animationDuration={Math.floor(Math.random() * 12)}
+                animationDuration={Math.floor(Math.random() * 2)}
                 animationDelay={Math.random() * 6}
                 size={Math.random() * 5}
                 style={{
