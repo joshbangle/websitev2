@@ -59,8 +59,13 @@ const Desc = styled.p`
 
 const DemoLink = styled.a`
     font-size: 1.3em;
+    transition: all .2s ease-in-out;
     font-family: Lora;
     color: inherit;
+    &:hover {
+        background-color: #ddd;
+        border-radius: 5px;
+    }
 `
 
 export default function Projects() {

@@ -20,7 +20,7 @@ export const images = {
 
         [
             2,
-            '/img/icons/campfire.png',
+            '/img/icons/video.png',
             'Spaz', 
             `Video hosting Camping Advice mockup using AWS for cloud video storage,
                 Rails Devise, and Stripe API. Bootstrap used for design and grid layouts.`,
