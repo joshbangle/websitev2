@@ -121,7 +121,7 @@ export default function Projects() {
                 opacity: 0,
                 delay: 1700
             })
-
+            stopSpring()
         }
         // eslint-disable-next-line
     }, [inView])
