@@ -26,6 +26,7 @@ const Grid = styled.div`
 `
 
 const IconContainer = styled.div`
+    width: 100%;
     display: flex;
     justify-content: center;
     width: 48%;
@@ -134,7 +135,7 @@ export default function Projects() {
                     <Project style={attr} key={projectImages[i][0]}>
                         <Name>{projectImages[i][2]}</Name>
                         <IconContainer>
-                            <a href={projectImages[i][4]} target="_blank" rel="noopener noreferrer"><Icon src={projectImages[i][1]} /></a>
+                            <a style={{width: '100%'}} href={projectImages[i][4]} target="_blank" rel="noopener noreferrer"><Icon src={projectImages[i][1]} /></a>
                         </IconContainer>
                         <Desc>{projectImages[i][3]}</Desc>
                         <div>
