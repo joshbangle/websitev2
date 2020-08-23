@@ -16,7 +16,9 @@ const Email = styled.div`
         width: 100%;
         text-align: center;
         font-size: 1.4em;
-        
+    }
+    @media(min-width: 900px){
+        font-size: 1.4em;
     }
     font-size: 2em;
     font-weight: bold;
