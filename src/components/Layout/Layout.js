@@ -32,8 +32,9 @@ const Layout = (props) => {
                 <Skillset/>
                 <Projects/>
                 <Contact/>
+
             </Content>
-            
+
         </LayoutWrapper>
     );
 }
