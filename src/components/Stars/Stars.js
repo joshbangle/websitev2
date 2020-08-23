@@ -15,9 +15,9 @@ const Star = styled.div`
     animation: ${flicker} infinite;
     animation-duration: ${props => props.animationDuration}s;
     animation-delay: ${props => props.animationDelay}s;
+    width: ${props => props.size}px;
+    height: ${props => props.size}px;
     position: absolute;
-    width: 5px;
-    height: 5px;
     border-radius: 2px;
     background: white;
 `
@@ -49,9 +49,10 @@ const Stars = () => {
                 <Star 
                 animationDuration={Math.floor(Math.random() * 12)}
                 animationDelay={Math.random() * 6}
+                size={Math.random() * 5}
                 style={{
                     top: `${Math.floor(Math.random()*vpHeight)}px`,
-                    left: `${Math.floor(Math.random()*vpWidth)}px`
+                    left: `${Math.floor(Math.random()*vpWidth)}px`,
                 }} />
             ))}
         </StarContainer>

@@ -75,7 +75,7 @@ export default function Projects() {
         threshold: 0,
         triggerOnce: true,
     })
-    const [trail, set, stop] = useTrail(projectImages.length, () => (
+    const [trail, setTrail, stopTrail] = useTrail(projectImages.length, () => (
         {
             opacity: 0,
             transform: 'translateY(150px)'
@@ -84,12 +84,12 @@ export default function Projects() {
     
     useEffect(() => {
         if(inView){
-            set({
+            setTrail({
                 opacity: 1,
                 transform: 'translateY(0px)',
                 delay: 500,
             })
-            stop()
+            stopTrail()
         }
         // eslint-disable-next-line
     }, [inView])
