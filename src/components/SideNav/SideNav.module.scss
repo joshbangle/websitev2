@@ -2,13 +2,18 @@ $navColor: #333333;
 $navFontColor: #999;
 
 $breakpoints: (
-    'phone': 640px,
+    'phone': 576px,
     'tablet': 1024px,
     'desktop': 1280px
 ) !default;
 
 @mixin breakpoint($breakpoint) {
     @if map-has-key($breakpoints , $breakpoint) {
+        @if $breakpoint == 'phone' {
+            @media (max-width: map-get($breakpoints, $breakpoint)){
+                @content;
+            }
+        }
         @media (min-width: map-get($breakpoints, $breakpoint)){
             @content;
         }
@@ -24,7 +29,7 @@ $breakpoints: (
     }
 }
 
-@include breakpoint('desktop'){
+@include breakpoint('tablet'){
     .sideNav {
         position: fixed;
         display: flex;

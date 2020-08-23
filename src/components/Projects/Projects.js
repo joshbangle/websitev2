@@ -5,6 +5,9 @@ import {images} from '../../json/images'
 import {useInView} from 'react-intersection-observer'
 
 const ProjectContainer = styled.div`
+    @media(max-width: 600px){
+        width: 100vw;
+    }
     width: 100%;
     min-height: 100vh;
     background-color: #FFF;
@@ -33,6 +36,10 @@ const Icon = styled.img`
 `
 
 const Project = styled(animated.div)`
+    @media(max-width: 890px) {
+        width: 100%;
+        padding: 0;
+    }
     box-sizing: border-box;
     width: 50%;
     display: flex;
@@ -110,7 +117,7 @@ export default function Projects() {
             })
             stopTrail()
             setSpring({
-                transform: 'translateY(-2600px)',
+                transform: 'translateY(-2800px)',
                 opacity: 0,
                 delay: 1700
             })

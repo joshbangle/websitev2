@@ -12,11 +12,22 @@ const Headline = styled.div`
 `
 
 const Email = styled.div`
+    @media(max-width: 600px) {
+        width: 100%;
+        text-align: center;
+        font-size: 1.4em;
+        
+    }
     font-size: 2em;
     font-weight: bold;
     font-family: Lora;
 `
 const TextContent = styled.div`
+    @media(max-width: 600px) {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
     width: 50%;
     text-align: left;
 `
@@ -38,6 +49,11 @@ const Everything = styled.div`
     bottom: 0;
 `
 const TrueContent = styled.div`
+    @media(max-width: 600px){
+        flex-direction: column;
+        padding: 50px 0;
+        width: 100vw;
+    }
     box-sizing: border-box;
     padding: 0 30%;
     min-height: 100vh;

@@ -14,12 +14,19 @@ const LayoutWrapper = styled.div`
 `
 
 const Content = styled.div`
-    margin-left: 332px;
-    height: 100vh;
-    float: right;
-    font-family: 'Roboto';
-    font-weight: 400;
-    width: 100%;
+    @media(min-width: 700px) {
+        margin: 0px;
+        width: 100vw;
+        padding: 0;
+    }
+    @media(min-width: 1024px){
+        margin-left: 332px;
+        height: 100vh;
+        float: right;
+        font-family: 'Roboto';
+        font-weight: 400;
+        width: 100%;
+    }
 `
 
 const Layout = (props) => {
@@ -32,9 +39,7 @@ const Layout = (props) => {
                 <Skillset/>
                 <Projects/>
                 <Contact/>
-
             </Content>
-
         </LayoutWrapper>
     );
 }

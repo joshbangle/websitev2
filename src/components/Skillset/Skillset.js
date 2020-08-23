@@ -9,6 +9,7 @@ import Stars from '../Stars/Stars'
 
 const Header = styled.h2`
     margin: 0;
+    max-width: 100%;
     color: #eee;
     font-size: 3em;
     font-family: Bebas Neue;

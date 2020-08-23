@@ -8,11 +8,16 @@
     flex-wrap: wrap;
 }
 .skillsetContent {
+    @media(max-width: 600px) {
+        padding: 100px 20px;
+        width: 100%;
+    }
+    box-sizing: border-box;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #3B3B4F;
-    padding: 0 140px;
+    padding: 140px 140px;
     z-index: 3;
 }
