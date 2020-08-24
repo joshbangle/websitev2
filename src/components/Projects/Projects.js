@@ -41,6 +41,12 @@ const Project = styled(animated.div)`
         width: 100%;
         padding: 0;
     }
+    @media(min-width: 1024px) {
+        width: 100%;
+    }
+    @media(min-width: 1248px) {
+        width: 50%;
+    }
     box-sizing: border-box;
     width: 50%;
     display: flex;
@@ -50,7 +56,8 @@ const Project = styled(animated.div)`
     margin-top: 32px;
     padding: 0 10%;
 `
-const Name = styled.h1`
+const Name = styled.h3`
+    font-size: 2.5em;
     letter-spacing: 1px;
     color: #333;
 `
@@ -81,6 +88,11 @@ const RocketContainer = styled(animated.div)`
 const Rocket = styled.img`
     height: 100%;
     transform: rotate(-45deg);
+`
+
+const Title = styled.h2`
+    font-size: 4em;
+    color: #333
 `
 export default function Projects() {
 
@@ -129,7 +141,7 @@ export default function Projects() {
 
     return (
         <ProjectContainer id='projects'>
-            <h1 style={{'fontSize': '4em', color: '#333'}}>Projects</h1>
+            <Title>Projects</Title>
             <Grid ref={ref}>
                 {trail.map((attr, i) => (
                     <Project style={attr} key={projectImages[i][0]}>

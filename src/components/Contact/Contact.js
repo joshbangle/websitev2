@@ -5,7 +5,7 @@ const ContactContent = styled.div`
     display: flex;
     flex-direction: column;
 `
-const Headline = styled.div`
+const Headline = styled.h2`
     font-size: 3em;
     letter-spacing: 2px;
     font-weight: bold;
@@ -14,25 +14,30 @@ const Headline = styled.div`
 const Email = styled.div`
     @media(max-width: 600px) {
         width: 100%;
-        text-align: center;
+    }
+    @media(min-width: 1024px){
         font-size: 1.4em;
     }
-    @media(min-width: 941px){
-        font-size: 1.4em;
+    @media(min-width: 1120px){
+        font-size: 2em;
     }
     font-size: 2em;
     font-weight: bold;
     font-family: Lora;
 `
 const TextContent = styled.div`
-    @media(max-width: 600px) {
+    @media(max-width: 940px) {
         box-sizing: border-box;
         width: 100%;
-        padding: 20px;
         text-align: center;
     }
     width: 50%;
     text-align: left;
+    padding: 20px;
+    h3 {
+        font-family: Lora;
+        font-size: 1.3em;
+    }
 `
 const Icon = styled.img`
     height: 250px;
@@ -58,7 +63,7 @@ const TrueContent = styled.div`
         width: 100vw;
     }
     box-sizing: border-box;
-    padding: 0 30%;
+    padding: 0 10%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -86,7 +91,7 @@ const Contact = () => {
 
                     <TextContent>
                         <Headline>Contact me</Headline>
-                        <h1 style={{fontFamily: 'Lora'}}>Feel free to reach out to me through <LinkedIn href='https://www.linkedin.com/in/joshbangle' target='_blank'>LinkedIn</LinkedIn>, or email me directly at:</h1>
+                        <h3>Feel free to reach out to me through <LinkedIn href='https://www.linkedin.com/in/joshbangle' target='_blank'>LinkedIn</LinkedIn>, or email me directly at:</h3>
                         <Email>joshua.bangle@gmail.com</Email>
                     </TextContent>
                 </TrueContent>

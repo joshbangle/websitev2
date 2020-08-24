@@ -7,7 +7,7 @@ import Stars from '../Stars/Stars'
 
 
 
-const Header = styled.h2`
+const Header = styled.h1`
     margin: 0;
     max-width: 100%;
     color: #eee;
