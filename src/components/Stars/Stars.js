@@ -27,12 +27,11 @@ const StarContainer = styled.div`
     top: 0;
     left: 0;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
 `
 
-const vpHeight = window.innerHeight;
-const vpWidth = window.innerWidth;
+
 const starCount = () => {
     const count = []
     for(let i = 1; i <= 300; i++){
@@ -40,10 +39,10 @@ const starCount = () => {
     }
     return count
 }
-const Stars = () => {
+const Stars = ({height}) => {
 
     const starsRef = useRef(null)
-
+    console.log(height)
     return (
         <StarContainer ref={starsRef} id='star-container'>
             {starCount().map((star, i) => (
@@ -53,8 +52,8 @@ const Stars = () => {
                 animationDelay={Math.random() * 6}
                 size={Math.random() * 5}
                 style={{
-                    top: `${Math.floor(Math.random() * vpHeight)}px`,
-                    left: `${Math.floor(Math.random() * vpWidth)}px`,
+                    top: `${Math.floor(Math.random() * height)}px`,
+                    left: `${Math.floor(Math.random() * 100)}%`,
                 }} />
             ))}
         </StarContainer>

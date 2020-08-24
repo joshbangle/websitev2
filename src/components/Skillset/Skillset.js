@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import {images} from '../../json/images.js'
 import styles from "../../Skillset.module.scss"
 import styled from 'styled-components'
@@ -25,11 +25,20 @@ const Tag = styled.h3`
 
 
 function Skillset() {
-    const icons = images.icons
+    const [refReady, setRefReady] = useState(false)
     const skillsetRef = useRef(null)
+    useEffect(() => {
+        if(!refReady){
+            setRefReady(true)
+        }
+    }, [refReady])
+
+    const icons = images.icons
+    
     return (
         <div ref={skillsetRef} id='skillset' className={styles.skillsetContent}>
-            <Stars />
+            
+            {refReady && <Stars height={skillsetRef.current.clientHeight} />}
             <Header>I am a Front End Developer who specializes in React.js</Header>
             <Tag>Some of my favorite technologies include:</Tag>
             <div className={styles.iconGrid}>

@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components'
 
 const ContactContent = styled.div`
+
     display: flex;
     flex-direction: column;
+
 `
 const Headline = styled.h2`
     font-size: 3em;
@@ -12,8 +14,11 @@ const Headline = styled.h2`
 `
 
 const Email = styled.div`
-    @media(max-width: 600px) {
-        width: 100%;
+    @media(min-width: 300px) {
+        font-size: 1.4em;
+    }
+    @media(min-width: 600px) {
+        font-size: 2em;
     }
     @media(min-width: 1024px){
         font-size: 1.4em;
