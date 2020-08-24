@@ -92,8 +92,10 @@ const Rocket = styled.img`
 `
 
 const Title = styled.h2`
+    position: relative;
     font-size: 4em;
-    color: #333
+    color: #333;
+    z-index: 40;
 `
 export default function Projects() {
 

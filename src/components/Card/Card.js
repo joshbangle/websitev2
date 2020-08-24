@@ -75,7 +75,7 @@ export default function AnimatedCards({ hoverText = false, number = 1, text, dat
     React.useEffect(() => {
         if(inView) {
             set({
-                opacity: 1,
+                opacity: .8,
                 transform: `translateY(0)`,
                 delay: 300
             })

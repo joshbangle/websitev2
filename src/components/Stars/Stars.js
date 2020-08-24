@@ -20,14 +20,15 @@ const Star = styled.div`
     position: absolute;
     border-radius: 2px;
     background: white;
+    z-index: 2;
 `
 
 const StarContainer = styled.div`
-    position: absolute;
     top: 0;
     left: 0;
     overflow: visible;
-    width: 100vw;
+    width: 100%;
+    z-index: 2;
     height: ${props => props.height + 180}px; 
 `
 
@@ -43,12 +44,9 @@ const starCount = () => {
 
 const Stars = ({ height }) => {
 
-    const starsRef = useRef(null)
-    
     console.log(height)
-
     return (
-        <StarContainer height={height} ref={starsRef} id='star-container'>
+        <StarContainer height={height} >
             {starCount().map((star, i) => (
                 <Star 
                 key={i}

@@ -1,11 +1,30 @@
-import React, {useRef, useState, useEffect} from 'react';
+import React from 'react';
 import {images} from '../../json/images.js'
 import styles from "../../Skillset.module.scss"
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import AnimatedCards from '../Card/Card'
-import Stars from '../Stars/Stars'
 
 
+
+const flicker = keyframes`
+	0%,100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+
+`
+const Star = styled.div`
+    animation: ${flicker} infinite;
+    animation-duration: ${props => props.animationDuration + 1}s;
+    animation-delay: ${props => props.animationDelay}s;
+    width: ${props => props.size}px;
+    height: ${props => props.size}px;
+    position: absolute;
+    border-radius: 2px;
+    background: white;
+`
 
 const Header = styled.h1`
     margin: 0;
@@ -23,22 +42,31 @@ const Tag = styled.h3`
 `
 
 
+const starCount = () => {
+    const count = []
+    for(let i = 1; i <= 300; i++){
+        count.push(i)
+    }
+    return count
+}
 
 function Skillset() {
-    const [refReady, setRefReady] = useState(false)
-    const skillsetRef = useRef(null)
-    useEffect(() => {
-        if(!refReady){
-            setRefReady(true)
-        }
-    }, [refReady])
 
     const icons = images.icons
     
     return (
-        <div ref={skillsetRef} id='skillset' className={styles.skillsetContent}>
-            
-            {refReady && <Stars height={skillsetRef.current.clientHeight} />}
+        <div id='skillset' className={styles.skillsetContent}>
+            {starCount().map((star, i) => (
+                <Star 
+                key={i}
+                animationDuration={Math.floor(Math.random() * 2)}
+                animationDelay={Math.random() * 6}
+                size={Math.random() * 5}
+                style={{
+                    top: `${Math.floor(Math.random() * 120)}%`,
+                    left: `${Math.floor(Math.random() * 100)}%`,
+                }} />
+            ))}
             <Header>I am a Front End Developer who specializes in React.js</Header>
             <Tag>Some of my favorite technologies include:</Tag>
             <div className={styles.iconGrid}>
