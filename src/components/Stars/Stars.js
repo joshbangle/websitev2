@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import styled, { keyframes } from 'styled-components'
 
 const flicker = keyframes`
@@ -42,17 +42,19 @@ const starCount = () => {
 }
 const Stars = () => {
 
+    const starsRef = useRef(null)
 
     return (
-        <StarContainer id='star-container'>
+        <StarContainer ref={starsRef} id='star-container'>
             {starCount().map((star, i) => (
                 <Star 
+                key={i}
                 animationDuration={Math.floor(Math.random() * 2)}
                 animationDelay={Math.random() * 6}
                 size={Math.random() * 5}
                 style={{
-                    top: `${Math.floor(Math.random()*vpHeight)}px`,
-                    left: `${Math.floor(Math.random()*vpWidth)}px`,
+                    top: `${Math.floor(Math.random() * vpHeight)}px`,
+                    left: `${Math.floor(Math.random() * vpWidth)}px`,
                 }} />
             ))}
         </StarContainer>

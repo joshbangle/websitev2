@@ -17,7 +17,7 @@ const Email = styled.div`
         text-align: center;
         font-size: 1.4em;
     }
-    @media(min-width: 900px){
+    @media(min-width: 941px){
         font-size: 1.4em;
     }
     font-size: 2em;
@@ -52,7 +52,7 @@ const Everything = styled.div`
     bottom: 0;
 `
 const TrueContent = styled.div`
-    @media(max-width: 600px){
+    @media(max-width: 940px){
         flex-direction: column;
         padding: 50px 0;
         width: 100vw;

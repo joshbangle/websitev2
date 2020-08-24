@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SideNav from '../SideNav/SideNav'
+import MobileNav from '../SideNav/MobileNav'
 import styled from 'styled-components'
 import Skillset from '../Skillset/Skillset'
 import Projects from '../Projects/Projects'
@@ -34,6 +35,7 @@ const Layout = (props) => {
 
     return (
         <LayoutWrapper>
+            <MobileNav />
             <SideNav  />
             <Content id='content'>
                 <Skillset/>
