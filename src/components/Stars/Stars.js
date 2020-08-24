@@ -26,9 +26,9 @@ const StarContainer = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow: visible;
     width: 100vw;
-    min-height: 100vh;
+    height: ${props => props.height + 180}px; 
 `
 
 
@@ -39,12 +39,16 @@ const starCount = () => {
     }
     return count
 }
-const Stars = ({height}) => {
+
+
+const Stars = ({ height }) => {
 
     const starsRef = useRef(null)
+    
     console.log(height)
+
     return (
-        <StarContainer ref={starsRef} id='star-container'>
+        <StarContainer height={height} ref={starsRef} id='star-container'>
             {starCount().map((star, i) => (
                 <Star 
                 key={i}
@@ -52,7 +56,7 @@ const Stars = ({height}) => {
                 animationDelay={Math.random() * 6}
                 size={Math.random() * 5}
                 style={{
-                    top: `${Math.floor(Math.random() * height)}px`,
+                    top: `${Math.floor(Math.random() * (height+180))}px`,
                     left: `${Math.floor(Math.random() * 100)}%`,
                 }} />
             ))}

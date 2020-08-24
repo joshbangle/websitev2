@@ -12,6 +12,7 @@ const ProjectContainer = styled.div`
     min-height: 100vh;
     background-color: #FFF;
     padding-top: 80px;
+    z-index: 4;
 `
 
 const Grid = styled.div`
