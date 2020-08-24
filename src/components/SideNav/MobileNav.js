@@ -28,7 +28,7 @@ const MobileNavContainer = styled.div`
     top: 0;
     left: 0;
     width: 100vw;
-    height: ${props => props.open ? `30%` : `60px`};
+    height: ${props => props.open ? `295px` : `60px`};
     padding: 0 20px;
     background: ${navColor};
     color: ${navFontColor};
@@ -63,13 +63,13 @@ const HamburgerButton = styled.div`
 const HamburgerLine = styled.span`
     transition: all .2s ease-in-out;
     opacity: 1;
-    transform-origin: 30px;
+    transform-origin: 29px;
     height: 3px;
     width: 30px;
     background: ${navFontColor};
-    border-radius: 2px;
+    border-radius: 5px;
     &:nth-child(1){
-        transform: ${props => props.open ? `rotate(-46deg)` : ``}
+        transform: ${props => props.open ? `rotate(-45deg)` : ``}
     };
     &:nth-child(2){
         ${ props => props.open && css`
@@ -78,18 +78,22 @@ const HamburgerLine = styled.span`
         `}
     };
     &:nth-child(3){
-        transform: ${props => props.open ? `rotate(46deg)` : ``}
+        transform: ${props => props.open ? `rotate(45deg)` : ``}
     };
 `
 
 const NavItems = styled(animated.ul)`
     display: ${props => props.open ? `flex` : `none`};
+    box-sizing: border-box;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 70px 0 45px 0;
+    padding: 0;
+    height: 100%;
     align-items: center;
     list-style: none;
     .nav-link {
-        font-size: 2.4em;
+        font-size: 1.9em;
         letter-spacing: 1px;
     }
 `
@@ -101,13 +105,15 @@ const NavLink = styled(animated.li)`
     }
 `
 const Socials = styled.div`
-    height: 40px;
+    height: 50px;
     display: flex;
+    margin-top: 10px;
     justify-content: center;
+    align-items: center;
 `
 const Social = styled.a`
     margin: 10px;
-    padding: 0 10px;
+    height: 50px;
     text-decoration: none;
     color: #0072b1;
     transition: all .2s ease-in-out;
