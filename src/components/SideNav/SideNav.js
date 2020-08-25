@@ -8,7 +8,7 @@ const navColor = `#333333`
 const navFontColor = `#DDD`
 
 const SideNavContainer = styled.div`
-    @media(max-width: 576px){
+    @media(max-width: 1023px){
         display: none;
     }
     position: fixed;
