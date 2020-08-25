@@ -1,11 +1,9 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 
 import SideNav from '../SideNav/SideNav'
 import MobileNav from '../SideNav/MobileNav'
 import styled from 'styled-components'
 import Skillset from '../Skillset/Skillset'
-import Projects from '../Projects/Projects'
-import Contact from '../Contact/Contact'
 
 
 
@@ -30,6 +28,9 @@ const Content = styled.div`
     }
 `
 
+const Projects = React.lazy(() => import(`../Projects/Projects`))
+const Contact = React.lazy(() => import(`../Contact/Contact`))
+
 const Layout = (props) => {
 
 
@@ -39,8 +40,11 @@ const Layout = (props) => {
             <SideNav  />
             <Content id='content'>
                 <Skillset/>
-                <Projects/>
-                <Contact/>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Projects/>
+                    <Contact/>
+                </Suspense>
+
             </Content>
         </LayoutWrapper>
     );
