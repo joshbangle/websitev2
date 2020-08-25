@@ -40,7 +40,7 @@ $breakpoints: (
         left: 0;
         padding: 0 16px 0 16px;
         background-color: $navColor;
-        color: #CCCCCC;
+        color: #DDDDDD;
     }    
 }
 
@@ -109,8 +109,8 @@ $breakpoints: (
         font-style: none;
         letter-spacing: 2px;
         &:hover {
-            text-decoration: underline solid #FFF;
-            color: #FFF;
+            text-decoration: underline solid #FFFFFF;
+            color: #FFFFFF;
         }
     }
 }

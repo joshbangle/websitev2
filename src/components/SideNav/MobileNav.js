@@ -5,7 +5,7 @@ import {Link} from 'react-scroll'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 const navColor = `#333333`;
-const navFontColor = `#CCCCCC`;
+const navFontColor = `#DDDDDD`;
 
 
 const MobileNavContainer = styled.div`
@@ -24,7 +24,7 @@ const MobileNavContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     top: 0;
     left: 0;
     width: 100vw;
@@ -41,7 +41,7 @@ const Name = styled.div`
     height: 60px;
     display: flex;
     align-items: center;
-    color: ${navFontColor};
+    color: ${navFontColor}; 
     h1 {
         font-family: Bebas Neue;
         font-size: 2.4em;
