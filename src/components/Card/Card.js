@@ -33,34 +33,19 @@ const CardGrid = styled.div`
 
 const ImageContainer = styled.div`
     display: flex;
-    height: 45%;
-    width: 100%;
+    height: 100%;
+    width: 100px;
     overflow: hidden;
 `
 
-const TextContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 55%;
-    margin-top: 0;
-`
 const Image = styled.img`
     object-fit: cover;
     width: 100%;
 `
 
-const DemoLink = styled.a`
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 1.1em;
-    color: black;
-`
-
-export default function AnimatedCards({ hoverText = false, number = 1, text, data}) {
+export default function AnimatedCards({ number = 1, data}) {
     const [ref, inView] = useInView({
-        threshold: 0,
+        threshold: 1,
         triggerOnce: true,
     })
 
@@ -86,29 +71,12 @@ export default function AnimatedCards({ hoverText = false, number = 1, text, dat
     return (
         <CardGrid id='grid' ref={ref}>
             {trail.map((attr, i) => (
-                <CardContainer key={i} text={text} id='card' style={attr}>
-                    {hoverText ? 
+                <CardContainer key={i} id='card' style={attr}>
                     <HoverText text={data[i][2]}> 
-                        <ImageContainer id='imgcontainer' style={{height: text ? `50%` : `100%`, width: text ? '400px' : '100px'}}>
+                        <ImageContainer id='imgcontainer'>
                             <Image id='img' key={data[i][0]} src={data[i][1]} alt={data[i][2]} />
                         </ImageContainer>
-                    </HoverText>
-                    :
-                    <ImageContainer id='imgcontainer'>
-                        <a rel="noopener noreferrer" href={data[i][4]} target='_blank'><Image id='img' key={data[i][0]} src={data[i][1]} alt={data[i][2]} /></a>
-                    </ImageContainer>
-                    }
-                    {text && 
-                    <TextContent id='text'>
-                        <h1 style={{margin: ' 8px 0 0 0'}}>{data[i][2]}</h1>
-                        <h4>{data[i][3]}</h4>
-                        <div>
-                            <DemoLink rel="noopener noreferrer" href={data[i][4]} target='_blank'>Click here for live demo</DemoLink>
-                            <br />
-                            <DemoLink rel="noopener noreferrer" href={data[i][5]} target='_blank'>View Github Repo</DemoLink>
-                        </div>
-                    </TextContent>
-                    }
+                    </HoverText>                  
                 </CardContainer>
             ))}
         </CardGrid>    

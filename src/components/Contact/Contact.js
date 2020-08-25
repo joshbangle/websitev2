@@ -95,18 +95,18 @@ const Contact = () => {
         <section id='contact'>
             <ContactContent>
                 <TrueContent>
-                    <Icon src='img/icons/satelite.svg' />
+                    <Icon src='img/icons/satelite.svg' alt='satellite image' />
 
                     <TextContent>
                         <Headline>Contact me</Headline>
-                        <h3 className='tag'>Feel free to reach out to me through <LinkedIn href='https://www.linkedin.com/in/joshbangle' target='_blank'>LinkedIn</LinkedIn>, or email me directly at:</h3>
+                        <h3 className='tag'>Feel free to reach out to me through <LinkedIn href='https://www.linkedin.com/in/joshbangle' target='_blank' rel="noopener noreferrer">LinkedIn</LinkedIn>, or email me directly at:</h3>
                         <Email>joshua.bangle@gmail.com</Email>
                     </TextContent>
                 </TrueContent>
                 
                 <Everything>
                     <PadContainer>
-                        <Pad src='/img/icons/pad2.svg' />
+                        <Pad src='/img/icons/pad2.svg' alt='rocket launch pad' />
                         <EasterEgg style={{margin: `0px 4px`}}>We Have Liftoff</EasterEgg>
                     </PadContainer>
                 </Everything>

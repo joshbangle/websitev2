@@ -142,19 +142,18 @@ const SideNav = () => {
                 </Brand>
                     <NavList>
                         <animated.li style={spring1}> 
-                            <Link className='skillsetLink' activeClass='activeLink' to={`${navItems[0].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[0]}</Link>
+                            <Link className='skillsetLink' activeClass='activeLink' to={`${navItems[0].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Skillset">{navItems[0]}</Link>
                         </animated.li>
                         <animated.li style={spring2}> 
-                            <Link className='projectsLink' activeClass='activeLink' to={`${navItems[1].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[1]}</Link>
+                            <Link className='projectsLink' activeClass='activeLink' to={`${navItems[1].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Projects">{navItems[1]}</Link>
                         </animated.li>
                         <animated.li style={spring3}> 
-                            <Link className='contactLink' activeClass='activeLink' to={`${navItems[2].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[2]}</Link>
+                            <Link className='contactLink' activeClass='activeLink' to={`${navItems[2].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Contact Me">{navItems[2]}</Link>
                         </animated.li>
                     </NavList>                    
                 <Socials>
-                    <a href='https://www.github.com/joshbangle' rel="noopener noreferrer" target='_blank' className='social'><FaGithubSquare size={50} /></a>
-                    
-                    <a href='https://www.linkedin.com/in/joshbangle' rel="noopener noreferrer" target='_blank' className='social'><FaLinkedin size={50} /></a>
+                    <a href='https://www.github.com/joshbangle' rel="noopener noreferrer" target='_blank' className='social' aria-label="Link to Github"><FaGithubSquare size={50} /></a>
+                    <a href='https://www.linkedin.com/in/joshbangle' rel="noopener noreferrer" target='_blank' className='social' aria-label="Link to LinkedIn"><FaLinkedin size={50} /></a>
                 </Socials>
             </NavElements>
         </SideNavContainer>

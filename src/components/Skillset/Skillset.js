@@ -97,7 +97,7 @@ function Skillset() {
                 <Tag>Some of my favorite technologies include:</Tag>
                 <IconGrid>
                     <Suspense fallback={<Loading speed={100}/>}>
-                        <AnimatedCards number={icons.length} data={icons} hoverText={true} />
+                        <AnimatedCards number={icons.length} data={icons} />
                     </Suspense>
                 </IconGrid>            
         </Content>

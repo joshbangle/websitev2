@@ -97,6 +97,12 @@ const Title = styled.h3`
     color: #333;
     z-index: 40;
 `
+
+const IconLinkWrapper = styled.a`
+    display: flex;
+    justifyContent: center;
+    width: 100%;
+`
 export default function Projects() {
 
     const projectImages = images.projects
@@ -150,19 +156,19 @@ export default function Projects() {
                     <Project style={attr} key={projectImages[i][0]}>
                         <Name>{projectImages[i][2]}</Name>
                         <IconContainer>
-                            <a style={{display: 'flex', justifyContent: 'center', width: '100%'}} href={projectImages[i][4]} target="_blank" rel="noopener noreferrer"><Icon src={projectImages[i][1]} /></a>
+                            <IconLinkWrapper href={projectImages[i][4]} target="_blank" rel="noopener noreferrer" aria-label={`Link to demo ${projectImages[i][2]}`}><Icon src={projectImages[i][1]} alt={projectImages[i][6]} /></IconLinkWrapper>
                         </IconContainer>
                         <Desc>{projectImages[i][3]}</Desc>
                         <div>
                             <DemoLink href={projectImages[i][4]} target="_blank" rel="noopener noreferrer">Live Demo</DemoLink>
-                            <DemoLink href={projectImages[i][5]} target="_blank" rel="noopener noreferrer">GitHub</DemoLink>
+                            <DemoLink href={projectImages[i][5]} target="_blank" rel="noopener noreferrer">View GitHub</DemoLink>
                         </div>
                         
                     </Project>
                 ))}
             </Grid>
             <RocketContainer style={spring}>
-                <Rocket src={`/img/icons/rocket.png`} />
+                <Rocket src={`/img/icons/rocket.png`} alt='rocket launching image' />
             </RocketContainer>
             
         </ProjectContainer>
