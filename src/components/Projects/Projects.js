@@ -91,7 +91,7 @@ const Rocket = styled.img`
     transform: rotate(-45deg);
 `
 
-const Title = styled.h2`
+const Title = styled.h3`
     position: relative;
     font-size: 4em;
     color: #333;

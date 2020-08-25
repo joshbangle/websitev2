@@ -6,7 +6,6 @@ import HoverText from '../HoverText/HoverText'
 
 const CardContainer = styled(animated.div)`
     border: none;
-    height: ${props => props.text ? '380px' : 'auto'};
     max-width: 300px;
     background-color: #ddd;
     box-shadow: 6px 10px 10px -9px rgba(0,0,0,0.75);
@@ -30,7 +29,6 @@ const CardGrid = styled.div`
     align-items: center;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-top: 56px;
 `
 
 const ImageContainer = styled.div`

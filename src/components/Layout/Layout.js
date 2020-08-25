@@ -4,6 +4,7 @@ import SideNav from '../SideNav/SideNav'
 import MobileNav from '../SideNav/MobileNav'
 import styled from 'styled-components'
 import Skillset from '../Skillset/Skillset'
+import Loading from '../Loading/Loading'
 
 
 
@@ -40,7 +41,7 @@ const Layout = (props) => {
             <SideNav  />
             <Content id='content'>
                 <Skillset/>
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Loading/>}>
                     <Projects/>
                     <Contact/>
                 </Suspense>

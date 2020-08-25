@@ -1,16 +1,110 @@
 import React from 'react'
-import styles from './SideNav.module.scss'
+import styled from 'styled-components'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 import {useSpring, animated} from 'react-spring'
-// import {useInView} from 'react-intersection-observer'
 import { Link } from 'react-scroll'
+
+const navColor = `#333333`
+const navFontColor = `#DDD`
+
+const SideNavContainer = styled.div`
+    @media(max-width: 576px){
+        display: none;
+    }
+    position: fixed;
+    display: flex;
+    width: 300px;
+    height: 100vh;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    padding: 0 16px 0 16px;
+    background-color: ${navColor};
+    color: ${navFontColor};
+`
+
+
+const Brand = styled.section`
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+    h3 {
+        margin-top: 0;
+        letter-spacing: normal;
+        font-family: 'Lora';
+    }
+    span {
+        font-family: 'Bebas Neue';
+        font-size: 3rem;
+        text-align: right;
+        margin: 0;
+        margin-top: 20px;
+    }
+`
+const Socials = styled.div`
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    .social {
+        padding: 0 10px;
+        text-decoration: none;
+        color: #0072b1;
+        transition: all .2s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+            color: #595959;
+    }
+`
+
+const NavList = styled.ul`
+    list-style: none;
+    text-align: right;
+    font-size: 2em;
+    li a {
+        font-style: none;
+        letter-spacing: 2px;
+        &:hover {
+            text-decoration: underline solid #FFFFFF;
+            color: #FFF;
+        }
+    }
+    .projectsLink {
+        text-decoration: underline solid transparent;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+    }
+    .skillsetLink {
+        text-decoration: underline solid transparent;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+    }
+    .contactLink {
+        text-decoration: underline solid transparent;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+    }
+    .activeLink {
+        text-decoration: underline solid #FFF;
+        color: #FFF;
+        font-weight: bold;
+    }
+`
+const NavElements = styled.div`
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: right;
+`
+
 
 const SideNav = () => {
 
     const navItems = ['Skillset', 'Projects', 'Contact']
-    // const [ref, inView] = useInView({
-    //     threshold: 1
-    // })
 
     const [spring1, set1, stop1] = useSpring(() => ({opacity: 0, transform: 'translate(-120px)'}))
     const [spring2, set2, stop2] = useSpring(() => ({opacity: 0, transform: 'translate(-120px)'}))
@@ -40,35 +134,30 @@ const SideNav = () => {
     }, [])
 
     return(
-        <>
-        <div className={styles.sideNav}>
-            <div className={styles.navElements}>
-                <section className={styles.brand}>
-                    <h1 className={styles.name}>Josh Bangle</h1>
+        <SideNavContainer>
+            <NavElements>
+                <Brand>
+                    <span>Josh Bangle</span>
                     <h3>Web Dev. Voice Actor. Dad. Nerd.</h3>              
-                </section>
-                <nav>
-                    <ul className={styles.navList}>
+                </Brand>
+                    <NavList>
                         <animated.li style={spring1}> 
-                            <Link className={styles.skillsetLink} activeClass={styles.activeLink} to={`${navItems[0].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[0]}</Link>
+                            <Link className='skillsetLink' activeClass='activeLink' to={`${navItems[0].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[0]}</Link>
                         </animated.li>
                         <animated.li style={spring2}> 
-                            <Link className={styles.projectsLink} activeClass={styles.activeLink} to={`${navItems[1].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[1]}</Link>
+                            <Link className='projectsLink' activeClass='activeLink' to={`${navItems[1].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[1]}</Link>
                         </animated.li>
                         <animated.li style={spring3}> 
-                            <Link className={styles.contactLink} activeClass={styles.activeLink} to={`${navItems[2].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[2]}</Link>
+                            <Link className='contactLink' activeClass='activeLink' to={`${navItems[2].toLowerCase()}`} spy={true} smooth={true} duration={800}>{navItems[2]}</Link>
                         </animated.li>
-                    </ul>                    
-                </nav>
-                <div className={styles.socials}>
-                    <a href='https://www.github.com/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.social}><FaGithubSquare size={50} /></a>
+                    </NavList>                    
+                <Socials>
+                    <a href='https://www.github.com/joshbangle' rel="noopener noreferrer" target='_blank' className='social'><FaGithubSquare size={50} /></a>
                     
-                    <a href='https://www.linkedin.com/in/joshbangle' rel="noopener noreferrer" target='_blank' className={styles.social}><FaLinkedin size={50} /></a>
-                </div>
-            </div>
-        </div>
-        
-        </>
+                    <a href='https://www.linkedin.com/in/joshbangle' rel="noopener noreferrer" target='_blank' className='social'><FaLinkedin size={50} /></a>
+                </Socials>
+            </NavElements>
+        </SideNavContainer>
     )
 }
 

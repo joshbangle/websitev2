@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import {images} from '../../json/images.js'
-import styles from "../../Skillset.module.scss"
 import styled, {keyframes} from 'styled-components'
-import AnimatedCards from '../Card/Card'
+import Loading from '../Loading/Loading'
 
 
 
@@ -26,6 +25,30 @@ const Star = styled.div`
     background: white;
 `
 
+const Content = styled.div`
+    @media(max-width: 600px) {
+        padding: 100px 20px;
+        width: 100%;
+    }
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #3B3B4F;
+    padding: 140px 140px;
+    z-index: 3;
+`
+
+
+const IconGrid = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+`
+
 const Header = styled.h1`
     margin: 0;
     max-width: 100%;
@@ -37,7 +60,7 @@ const Header = styled.h1`
 const Tag = styled.h3`
     font-family: Lora;
     font-size: 2em;
-    margin-bottom: 50px;
+    margin-bottom: 106px;
     color: #eee;
 `
 
@@ -50,12 +73,15 @@ const starCount = () => {
     return count
 }
 
+const AnimatedCards = React.lazy(() => import(`../Card/Card`))
+
 function Skillset() {
 
     const icons = images.icons
     
     return (
-        <div id='skillset' className={styles.skillsetContent}>
+        <Content id='skillset'>
+
             {starCount().map((star, i) => (
                 <Star 
                 key={i}
@@ -67,12 +93,14 @@ function Skillset() {
                     left: `${Math.floor(Math.random() * 100)}%`,
                 }} />
             ))}
-            <Header>I am a Front End Developer who specializes in React.js</Header>
-            <Tag>Some of my favorite technologies include:</Tag>
-            <div className={styles.iconGrid}>
-                <AnimatedCards number={icons.length} data={icons} hoverText={true} />
-            </div>
-        </div>
+                <Header>I am a Front End Developer who specializes in React.js</Header>
+                <Tag>Some of my favorite technologies include:</Tag>
+                <IconGrid>
+                    <Suspense fallback={<Loading speed={100}/>}>
+                        <AnimatedCards number={icons.length} data={icons} hoverText={true} />
+                    </Suspense>
+                </IconGrid>            
+        </Content>
     );
 }
 

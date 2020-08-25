@@ -7,14 +7,14 @@ const ContactContent = styled.div`
     flex-direction: column;
 
 `
-const Headline = styled.h2`
+const Headline = styled.h3`
     font-size: 3em;
     letter-spacing: 2px;
     font-weight: bold;
 `
 
 const Email = styled.div`
-    @media(min-width: 300px) {
+    @media(max-width: 599px) {
         font-size: 1.4em;
     }
     @media(min-width: 600px) {
@@ -39,9 +39,8 @@ const TextContent = styled.div`
     width: 50%;
     text-align: left;
     padding: 20px;
-    h3 {
+    .tag {
         font-family: Lora;
-        font-size: 1.3em;
     }
 `
 const Icon = styled.img`
@@ -87,6 +86,10 @@ const PadContainer = styled.div`
 const Pad = styled.img`
     height: 100%;
 `
+const EasterEgg = styled.p`
+    margin: 0 4px;
+    color: #DDD;
+`
 const Contact = () => {
     return (
         <section id='contact'>
@@ -96,7 +99,7 @@ const Contact = () => {
 
                     <TextContent>
                         <Headline>Contact me</Headline>
-                        <h3>Feel free to reach out to me through <LinkedIn href='https://www.linkedin.com/in/joshbangle' target='_blank'>LinkedIn</LinkedIn>, or email me directly at:</h3>
+                        <h3 className='tag'>Feel free to reach out to me through <LinkedIn href='https://www.linkedin.com/in/joshbangle' target='_blank'>LinkedIn</LinkedIn>, or email me directly at:</h3>
                         <Email>joshua.bangle@gmail.com</Email>
                     </TextContent>
                 </TrueContent>
@@ -104,7 +107,7 @@ const Contact = () => {
                 <Everything>
                     <PadContainer>
                         <Pad src='/img/icons/pad2.svg' />
-                        <p style={{margin: `0px 4px`}}>We Have Liftoff</p>
+                        <EasterEgg style={{margin: `0px 4px`}}>We Have Liftoff</EasterEgg>
                     </PadContainer>
                 </Everything>
             </ContactContent>
