@@ -38,15 +38,22 @@ const Icon = styled.img`
 `
 
 const Project = styled(animated.div)`
+    @media(min-width: 720px) {
+
+    }
     @media(max-width: 890px) {
-        width: 100%;
-        padding: 0;
+        min-width: 100%;
     }
     @media(min-width: 1024px) {
         width: 100%;
+        padding: 0 20%
     }
     @media(min-width: 1248px) {
         width: 50%;
+        padding: 0 4%;
+    }
+    @media(min-width: 1700px) {
+        padding: 0 10%;
     }
     box-sizing: border-box;
     width: 50%;
@@ -55,7 +62,7 @@ const Project = styled(animated.div)`
     align-items: center;
     flex-direction: column;
     margin-top: 32px;
-    padding: 0 10%;
+    padding: 0 4%;
 `
 const Name = styled.h3`
     font-size: 2.5em;
@@ -70,8 +77,11 @@ const Desc = styled.p`
 `
 
 const DemoLink = styled.a`
-    margin: 0 10px;
-    font-size: 1.3em;
+    @media(max-width: 424px){
+        margin-top: 15px;
+    }
+    margin: 0 15px;
+    font-size: 1.5em;
     font-weight: bold;
     transition: all .2s ease-in-out;
     font-family: Lora;
@@ -81,6 +91,15 @@ const DemoLink = styled.a`
         border-radius: 5px;
     }
 `
+const LinkContainers = styled.div`
+    @media(max-width: 424px) {
+        flex-direction: column;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+`
+
 const RocketContainer = styled(animated.div)`
     position: absolute;
     margin-left: 40px;
@@ -100,8 +119,9 @@ const Title = styled.h3`
 
 const IconLinkWrapper = styled.a`
     display: flex;
-    justifyContent: center;
+    justify-content: center;
     width: 100%;
+    text-wrap: nowrap;
 `
 export default function Projects() {
 
@@ -159,10 +179,10 @@ export default function Projects() {
                             <IconLinkWrapper href={projectImages[i][4]} target="_blank" rel="noopener noreferrer" aria-label={`Link to demo ${projectImages[i][2]}`}><Icon src={projectImages[i][1]} alt={projectImages[i][6]} /></IconLinkWrapper>
                         </IconContainer>
                         <Desc>{projectImages[i][3]}</Desc>
-                        <div>
+                        <LinkContainers>
                             <DemoLink href={projectImages[i][4]} target="_blank" rel="noopener noreferrer">Live Demo</DemoLink>
                             <DemoLink href={projectImages[i][5]} target="_blank" rel="noopener noreferrer">View GitHub</DemoLink>
-                        </div>
+                        </LinkContainers>
                         
                     </Project>
                 ))}
