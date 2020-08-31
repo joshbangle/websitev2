@@ -72,7 +72,7 @@ const TrueContent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #38586D;
+    background-color: #28586E;
     color: #FFF;
 `
 const PadContainer = styled.div`

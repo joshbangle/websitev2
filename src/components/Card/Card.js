@@ -32,6 +32,12 @@ const CardGrid = styled.div`
 `
 
 const ImageContainer = styled.div`
+    @media(max-width: 335px) {
+        max-width: 60px;
+    }
+    @media(max-width: 375px){
+        width: 80px;
+    }
     display: flex;
     height: 100%;
     width: 100px;
@@ -45,7 +51,7 @@ const Image = styled.img`
 
 export default function AnimatedCards({ number = 1, data}) {
     const [ref, inView] = useInView({
-        threshold: 1,
+        threshold: 0.2,
         triggerOnce: true,
     })
 

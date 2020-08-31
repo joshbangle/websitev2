@@ -72,17 +72,7 @@ const NavList = styled.ul`
             color: #FFF;
         }
     }
-    .projectsLink {
-        text-decoration: underline solid transparent;
-        cursor: pointer;
-        transition: all .4s ease-in-out;
-    }
-    .skillsetLink {
-        text-decoration: underline solid transparent;
-        cursor: pointer;
-        transition: all .4s ease-in-out;
-    }
-    .contactLink {
+    .itemLink {
         text-decoration: underline solid transparent;
         cursor: pointer;
         transition: all .4s ease-in-out;
@@ -104,11 +94,12 @@ const NavElements = styled.div`
 
 const SideNav = () => {
 
-    const navItems = ['Skillset', 'Projects', 'Contact']
+    const navItems = ['Skillset', 'Projects', 'About', 'Contact']
 
     const [spring1, set1, stop1] = useSpring(() => ({opacity: 0, transform: 'translate(-120px)'}))
     const [spring2, set2, stop2] = useSpring(() => ({opacity: 0, transform: 'translate(-120px)'}))
     const [spring3, set3, stop3] = useSpring(() => ({opacity: 0, transform: 'translate(-120px)'}))
+    const [spring4, set4, stop4] = useSpring(() => ({opacity: 0, transform: 'translate(-120px)'}))
 
 
     React.useEffect(() => {
@@ -130,6 +121,12 @@ const SideNav = () => {
             transform: 'translate(0px)'
         })
         stop3()
+        set4({
+            opacity: 1,
+            transform: 'translate(0px)',
+            delay: 900
+        })
+        stop4()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -142,13 +139,16 @@ const SideNav = () => {
                 </Brand>
                     <NavList>
                         <animated.li style={spring1}> 
-                            <Link className='skillsetLink' activeClass='activeLink' to={`${navItems[0].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Skillset">{navItems[0]}</Link>
+                            <Link className='itemLink' activeClass='activeLink' to={`${navItems[0].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Skillset">{navItems[0]}</Link>
                         </animated.li>
                         <animated.li style={spring2}> 
-                            <Link className='projectsLink' activeClass='activeLink' to={`${navItems[1].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Projects">{navItems[1]}</Link>
+                            <Link className='itemLink' activeClass='activeLink' to={`${navItems[1].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Projects">{navItems[1]}</Link>
                         </animated.li>
                         <animated.li style={spring3}> 
-                            <Link className='contactLink' activeClass='activeLink' to={`${navItems[2].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Contact Me">{navItems[2]}</Link>
+                            <Link className='itemLink' activeClass='activeLink' to={`${navItems[2].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to About">{navItems[2]}</Link>
+                        </animated.li>
+                        <animated.li style={spring4}> 
+                            <Link className='itemLink' activeClass='activeLink' to={`${navItems[3].toLowerCase()}`} spy={true} smooth={true} duration={800} aria-label="Jump to Contact Me">{navItems[3]}</Link>
                         </animated.li>
                     </NavList>                    
                 <Socials>

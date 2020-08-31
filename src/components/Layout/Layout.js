@@ -31,6 +31,7 @@ const Content = styled.div`
 
 const Projects = React.lazy(() => import(`../Projects/Projects`))
 const Contact = React.lazy(() => import(`../Contact/Contact`))
+const About = React.lazy(() => import(`../About/About`))
 
 const Layout = (props) => {
 
@@ -43,6 +44,7 @@ const Layout = (props) => {
                 <Skillset/>
                 <Suspense fallback={<Loading/>}>
                     <Projects/>
+                    <About />
                     <Contact/>
                 </Suspense>
 

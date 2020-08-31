@@ -5,7 +5,10 @@ export const images = {
         [3, '/img/badges/sass-icon.png', 'SASS to make my CSS sassy'],
         [4, '/img/badges/JS-icon.png', 'Javascript to make things HAPPEN'],
         [5, '/img/badges/react-icon.png', 'React is what this is all about!'],
-        [6, '/img/badges/git-icon.png', 'Git for version control']
+        [6, '/img/badges/git-icon.png', 'Git for version control'],
+        [7, '/img/badges/graphql-icon.png', 'GraphQL for navigating file trees with ease'],
+        [8, '/img/badges/ruby-icon.png', 'Ruby (on Rails) for creating full-stack web apps'],
+        [9, '/img/badges/postgresql-icon.png', 'PostgreSQL, because all of that data needs to go somewhere!']
     ],
     'projects': [
         [

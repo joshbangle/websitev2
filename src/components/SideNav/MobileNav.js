@@ -28,7 +28,7 @@ const MobileNavContainer = styled.div`
     top: 0;
     left: 0;
     width: 100vw;
-    height: ${props => props.open ? `295px` : `60px`};
+    height: ${props => props.open ? `415px` : `60px`};
     padding: 0 20px;
     background: ${navColor};
     color: ${navFontColor};
@@ -87,7 +87,7 @@ const NavItems = styled(animated.ul)`
     box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
-    margin: 70px 0 45px 0;
+    margin: 90px 0 45px 0;
     padding: 0;
     height: 100%;
     align-items: center;
@@ -160,6 +160,9 @@ const MobileNav = () => {
                 </NavLink>
                 <NavLink>
                     <Link onClick={() => setOpen(false)} activeClass='activeLink' className='nav-link' to='projects' smooth={true} spy={true}>Projects</Link>
+                </NavLink>
+                <NavLink>
+                    <Link onClick={() => setOpen(false)} activeClass='activeLink' className='nav-link' to='about' smooth={true} spy={true}>About</Link>
                 </NavLink>
                 <NavLink>
                     <Link onClick={() => setOpen(false)} activeClass='activeLink' className='nav-link' to='contact' smooth={true} spy={true}>Contact</Link>
