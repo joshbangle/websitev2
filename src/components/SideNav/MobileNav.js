@@ -42,10 +42,12 @@ const Name = styled.div`
     display: flex;
     align-items: center;
     color: ${navFontColor}; 
-    h1 {
+    .nameLink {
         font-family: Bebas Neue;
         font-size: 2.4em;
         margin: 0;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
 `
 const HamburgerButton = styled.div`
@@ -147,7 +149,7 @@ const MobileNav = () => {
     return (
         <MobileNavContainer ref={ref} open={open}>
             <Name>
-                <h1>Josh Bangle</h1>
+                <Link className='nameLink' to='skillset' smooth={true}>Josh Bangle</Link>
             </Name>
             <HamburgerButton onClick={() => setOpen(!open)} >
                 <HamburgerLine open={open} className='burger-line'/>
