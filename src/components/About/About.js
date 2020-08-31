@@ -58,7 +58,7 @@ export default function About() {
     return (
         <Content id='about'>
             <ImageContainer>
-                <Img src='/food.jpg' />
+                <Img src='/food.jpg' alt='Josh happily eating a sandwich' />
             </ImageContainer>
             <Text>
                 <h3>Dallas based Web Developer</h3>
