@@ -89,7 +89,7 @@ function Skillset() {
                 animationDelay={Math.random() * 6}
                 size={Math.random() * 5}
                 style={{
-                    top: `${Math.floor(Math.random() * 160)}%`,
+                    top: `${Math.floor(Math.random() * 170)}%`,
                     left: `${Math.floor(Math.random() * 100)}%`,
                 }} />
             ))}
