@@ -26,11 +26,6 @@ const ImageContainer = styled.div`
     width: 400px;
     box-shadow: inset 0px 0px 6px 14px #CCCCCC;
 `
-const Img = styled.img`
-    position: relative;
-    height: 100%;
-    z-index: 19;
-`
 
 const EnterButton = styled.button`
     text-align: center;
@@ -44,7 +39,7 @@ const EnterButton = styled.button`
 
 
 export default function Landing() {
-    const [spring, set, stop] = useSpring(() => ({
+    const [spring, set] = useSpring(() => ({
         opacity: 1,
         transform: 'translateY(0px)'
     }))

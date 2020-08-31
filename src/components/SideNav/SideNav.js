@@ -126,6 +126,7 @@ const SideNav = () => {
             transform: 'translate(0px)',
             delay: 900
         })
+        stop4()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 

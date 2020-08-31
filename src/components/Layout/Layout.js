@@ -5,7 +5,6 @@ import MobileNav from '../SideNav/MobileNav'
 import styled from 'styled-components'
 import Skillset from '../Skillset/Skillset'
 import Loading from '../Loading/Loading'
-import Landing from '../Landing/Landing'
 
 
 
