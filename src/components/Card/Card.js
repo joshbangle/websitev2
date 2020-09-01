@@ -7,6 +7,7 @@ import HoverText from '../HoverText/HoverText'
 const CardContainer = styled(animated.div)`
     border: none;
     max-width: 300px;
+    min-width: 60px;
     background-color: #ddd;
     box-shadow: 6px 10px 10px -9px rgba(0,0,0,0.75);
     padding: 16px 16px;
