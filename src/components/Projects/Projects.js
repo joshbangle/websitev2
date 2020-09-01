@@ -145,7 +145,7 @@ export default function Projects() {
             mass: 10,
             precision: 0.1
         },
-        transform: 'translateY(0px)',
+        transform: 'translateY(200px)',
         opacity: 1
         }
     ))

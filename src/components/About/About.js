@@ -7,6 +7,7 @@ const Content = styled.div`
         width: 100%;
         flex-direction: column;
     }
+    position: relative;
     box-sizing: border-box;
     min-height: 100vh;
     display: flex;
@@ -14,7 +15,7 @@ const Content = styled.div`
     align-items: center;
     background-color: #53527F;
     padding: 140px 140px;
-    z-index: 3;
+    z-index: 400;
 `
 
 const ImageContainer = styled.div`

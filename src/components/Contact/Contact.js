@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components'
 
 const ContactContent = styled.div`
-
+    position: relative;
     display: flex;
     flex-direction: column;
-
+    z-index: 400;
 `
 const Headline = styled.h3`
     font-size: 3em;

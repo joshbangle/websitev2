@@ -20,7 +20,7 @@ const Star = styled.div`
     animation-delay: ${props => props.animationDelay}s;
     width: ${props => props.size}px;
     height: ${props => props.size}px;
-    position: absolute;
+    position: fixed;
     border-radius: 2px;
     background: white;
 `
@@ -67,7 +67,7 @@ const Tag = styled.h3`
 
 const starCount = () => {
     const count = []
-    for(let i = 1; i <= 300; i++){
+    for(let i = 1; i <= 250; i++){
         count.push(i)
     }
     return count
@@ -89,7 +89,7 @@ function Skillset() {
                 animationDelay={Math.random() * 6}
                 size={Math.random() * 5}
                 style={{
-                    top: `${Math.floor(Math.random() * 170)}%`,
+                    top: `${Math.floor(Math.random() * 100)}%`,
                     left: `${Math.floor(Math.random() * 100)}%`,
                 }} />
             ))}
