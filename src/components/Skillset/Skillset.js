@@ -60,7 +60,7 @@ const Header = styled.h1`
 const Tag = styled.h3`
     font-family: Lora;
     font-size: 2em;
-    margin-bottom: 106px;
+    margin-bottom: 80px;
     color: #eee;
 `
 

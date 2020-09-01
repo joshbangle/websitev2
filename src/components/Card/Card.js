@@ -46,7 +46,8 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
     object-fit: cover;
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 `
 
 export default function AnimatedCards({ number = 1, data}) {
